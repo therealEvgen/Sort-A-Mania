@@ -1,5 +1,6 @@
 package com.company;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Main {
@@ -33,8 +34,21 @@ public class Main {
 
     public static String[] randStringArr(int num, int length)
     {
+        String[] alphabet = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
         String[] temp = new String[num];
-        for(int i = 0; i < num; i ++);
+        for(int i = 0; i < num; i ++)
+        {
+            String x = "";
+            for(int j = 0; j < length; j ++)
+            {
+                x += alphabet[(int)(Math.random() * (alphabet.length-1))];
+            }
+            temp[i] = x;
+        }
+        return temp;
     }
-
+    public static void printArr(int[] arr)
+    {
+        System.out.println(Arrays.toString(arr));
+    }
 }
