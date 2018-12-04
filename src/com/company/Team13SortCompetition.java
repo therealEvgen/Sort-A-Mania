@@ -1,6 +1,6 @@
 package com.company;
 
-public class Team1SortCompetition extends SortCompetition{
+public class Team13SortCompetition extends SortCompetition{
 
     public int challengeOne(int[] arr)
     {
@@ -78,4 +78,16 @@ public class Team1SortCompetition extends SortCompetition{
         }
         return arr[arr.length/2];
     }
+    public int challengeFour(int[][] arr) {
+        int[] medians = new int[arr.length];
+        for (int i = 0; i < arr.length; i ++) {
+            quickSort(arr[i], 0, arr[i].length - 1);
+            medians[i] = arr[i][arr[i].length/2 - 1];
+        }
+        quickSort(medians, 0, medians.length - 1);
+        return medians[medians.length/2 - 1];
+    }
+    public int challengeFive(Comparable[] arr, Comparable query) {return 0;}
+
+    public String greeting() {return "";}
 }
