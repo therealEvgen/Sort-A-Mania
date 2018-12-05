@@ -87,7 +87,14 @@ public class Team13SortCompetition extends SortCompetition{
         quickSort(medians, 0, medians.length - 1);
         return medians[medians.length/2 - 1];
     }
-    public int challengeFive(Comparable[] arr, Comparable query) {return 0;}
+
+    public int challengeFive(Comparable[] arr, Comparable query)
+    {
+        SortAlgorithm.quickSort((Thingy[]) arr, 0, arr.length - 1);
+        return (SortAlgorithm.getIdx(arr, query));
+    }
+
+
 
     public String greeting() {return "";}
 }
